@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--扫描  SpringMVC只需要扫描控制层 ->容器/...-->
+    <context:component-scan base-package="com.hkk.ssm.controller"></context:component-scan>
+
+<!--    视图解析器-->
+    <bean id="viewResolver"
+          class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+        <property name="order" value="1"/>
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="templateEngine">
+            <bean class="org.thymeleaf.spring5.SpringTemplateEngine">
+                <property name="templateResolver">
+                    <bean
+                            class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+                        <!-- 视图前缀 -->
+                        <property name="prefix" value="/WEB-INF/templates/"/>
+                        <!-- 视图后缀 -->
+                        <property name="suffix" value=".html"/>
+                        <property name="templateMode" value="HTML5"/>
+                        <property name="characterEncoding" value="UTF-8" />
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+<!--    默认servlet 用于静态资源处理-->
+<!--    DispatcherServlet没有处理静态资源的能力 -> 就会出错-->
+<!--    声 明 了 <mvc:default-servlet-handler /> 后 ，-->
+<!--    会对进入 DispatcherServlet的 URL 进行筛查，-->
+<!--    如果发现是静态资源的请求，-->
+<!--    就将该请求转由 Web 应用服务器默认的Servlet 处理-->
+    <mvc:default-servlet-handler/>
+
+<!--    开启mvc注解驱动-->
+<!--    如果 Spring MVC 中设置了任意一个视图控制器（View-Controller），-->
+<!--    那么其他控制器中请求映射将全部失效/@Controller注解无法解析，此时我们需要在 Spring MVC 的核心配置文件中开启 mvc 注解驱动标签。-->
+    <mvc:annotation-driven/>
+
+<!--    视图控制器-->
+    <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
+
+<!--    上传-->
+    <bean id="multipartResolver" class ="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
+</beans>

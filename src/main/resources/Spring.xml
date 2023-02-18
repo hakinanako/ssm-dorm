@@ -9,6 +9,23 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    Spring管理的组件 Service等（control外） -->
+<!--扫描-->
+    <context:component-scan base-package="com.hkk.ssm">
+<!--        排除control注解 ->mvc-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
-<!--    Spring管理的组件-->
+<!--    引入properties-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+<!--    数据源 德鲁伊等-->
+<!--    使用properties文件。。。-->
+<!--    使用 ${}上面引用properties！-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+    <property name="driverClassName" value="${jdbc.driver}"/>
+    <property name="url" value="${jdbc.url}"/>
+    <property name="username" value="${jdbc.username}"/>
+    <property name="password" value="${jdbc.password}"/>
+    </bean>
 </beans>

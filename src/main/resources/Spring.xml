@@ -28,4 +28,23 @@
     <property name="username" value="${jdbc.username}"/>
     <property name="password" value="${jdbc.password}"/>
     </bean>
+
+<!--    Mybatis-->
+<!--    SqlSessionFactoryBean -> bean ioc  -->
+<!--    通过sqlSessionFactoryBean ->获取FactoryBean提供的Bean（factory）而不是FactoryBean本身-->
+<!--    <bean class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--&lt;!&ndash;        不设置id？ -> 不是由我们访问的~~~&ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    ?可以在sqlSessionFactoryBean中配置mybatis的配置文件-->
+<!--那麽也就不需要mybatis的配置文件啦? 呃呃e-->
+
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="mybatis-config.xml"></property>
+<!--    直接引用Spring裏的數據源-->
+        <property name="dataSource" ref="dataSource"></property>
+<!--        Aliases! 也可以放到Spring裏-->
+<!--        <property name="typeAliasesPackage" value=""-->
+    </bean>
+
 </beans>

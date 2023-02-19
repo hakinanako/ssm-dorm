@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!--    引入配置文件jdbc-->
+<!--    <properties resource="jdbc.properties"/>-->
+
+<!--    类型别名-->
+<!--    <typeAlias type="原类名" alisa="别名">-->
+<!--    <typeAliases>-->
+<!--        <package name=""/>-->
+<!--    </typeAliases>-->
+
+<!--&lt;!&ndash;    连接环境&ndash;&gt;-->
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--&lt;!&ndash;            jdbc是原生管理，比如手动设置提交等&ndash;&gt;-->
+<!--&lt;!&ndash;            managed是被管理的，比如后继用Spring管理；&ndash;&gt;-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--&lt;!&ndash;            数据源 配置文件读入&ndash;&gt;-->
+<!--&lt;!&ndash;            <dataSource type="POOLED">&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="driver" value="${jdbc.driver}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="url" value="${jdbc.url}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="username" value="${jdbc.username}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="password" value="${jdbc.password}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </dataSource>&ndash;&gt;-->
+<!--        </environment>-->
+<!--    </environments>-->
+<!--上面的都可以放到spring裏配置啦-->
+
+
+<!--    引入映射文件-->
+    <mappers>
+        <mapper resource=""/>
+    </mappers>
+</configuration>

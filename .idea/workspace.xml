@@ -9,11 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24ffb00-5947-4200-8c39-d0ae02ea674a" name="变更" comment="push test commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hkk/ssm/service/impl/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+    <list default="true" id="b24ffb00-5947-4200-8c39-d0ae02ea674a" name="变更" comment="ee">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hkk/ssm/mapper/StudentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hkk/ssm/service/impl/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hkk/ssm/service/impl/StudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +34,8 @@
         <option value="spring-config" />
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="mybatis-config" />
+        <option value="mybatis-mapper" />
         <option value="Class" />
       </list>
     </option>
@@ -68,6 +76,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "E:/ideaProjects/ssm",
     "nodejs_package_manager_path": "npm",
@@ -76,6 +85,15 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
     "spring.configuration.checksum": "078aab7ae8c1a0df339ac8525790d5e1"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "java.sql.Driver",
+      "mysql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
+      "MySQL"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -178,7 +196,8 @@
       <workItem from="1676607860984" duration="11451000" />
       <workItem from="1676642970408" duration="7066000" />
       <workItem from="1676728002077" duration="3042000" />
-      <workItem from="1676735382585" duration="642000" />
+      <workItem from="1676735382585" duration="1269000" />
+      <workItem from="1676805361820" duration="10907000" />
     </task>
     <task id="LOCAL-00001" summary="push test commit">
       <created>1676649275067</created>
@@ -187,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676649275067</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ee">
+      <created>1676736267629</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676736267629</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +244,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="push test commit" />
+    <MESSAGE value="ee" />
+    <option name="LAST_COMMIT_MESSAGE" value="ee" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
